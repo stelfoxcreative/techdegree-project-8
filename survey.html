@@ -1,83 +1,91 @@
 <!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="css/survey.css" rel="stylesheet" type="text/css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-    <title>Accessible Frog</title>
-  </head>
-
-  <body>
-    <div class="main-nav">
-      <ul class="nav">
-        <li class="name"><a href="index.html">Accessible Frog</a></li>
-        <li><a href="tour.html">Tour</a></li>
-        <li><a href="#">Survey</a></li>
-      </ul>
-    </div>
-
-    <header>
-    </header>
-
-    <main>
-      <p class= "heading">Survey</p>
-      <div class="card">
-        <div class="flex">
-          <img class="photo" src= "img/concert01.jpg">
-          <div class="container">
-            <form class = "survey">
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <link href="css/survey.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <title>Accessible Frog</title>
+</head>
+<body>
+  <nav class="main-nav" role="navigation">
+    <ul class="nav">
+      <li class="name"><a href="index.html">Accessible Frog</a></li>
+      <li><a href="tour.html">Tour</a></li>
+      <li><a href="survey.html">Survey</a></li>
+    </ul>
+  </nav>
+  <header role="banner">
+    <h1>ACCESSIBLE FROG</h1>
+    <h2>we make awesome music</h2>
+  </header>
+  <main role="main">
+    <h2>Survey</h2>
+    <div class="card">
+      <div class="flex">
+        <img class="photo" src= "img/concert01.jpg" alt="fans at our live concert">
+        <div class="container">
+          <form class="survey">
+            <fieldset>
+              <legend>Take part in our quick survey</legend>
               <p>Who is your favorite band member:</p>
-              <input type="radio" name="res" value="John"> John
-              <input type="radio" name="res" value="Hazzard"> Hazzard
-              <input type="radio" name="res" value="Bob"> Bob
-              <input type="radio" name="res" value="Sally"> Sally
-
-              <p>What is your favorite album:</p>
+              <input type="radio" name="res" value="John" id="john">
+              <label for="john">John</label>
+              <input type="radio" name="res" value="Hazzard" id="hazzard">
+              <label for="hazzard">Hazzard</label>
+              <input type="radio" name="res" value="Bob" id="bob">
+              <label for="bob">Bob</label>
+              <input type="radio" name="res" value="Sally" id="sally">
+              <label for="sally">Sally</label>
+              <p><label for="albums">What is your favorite album:</label></p>
               <select id="albums" name="select">
-                <option value="1">Party For An Angel</option>
-                <option value="2">A Day Of Old</option>
-                <option value="3">Finding My Shadow</option>
-                <option value="4">Diamond Fireworks</option>
-                <option value="5">Enjoy Your Desire</option>
-                <option value="6">This Is For You</option>
+                <option value="1">A Day Of Old</option>
+                <option value="2">Diamond Fireworks</option>
+                <option value="3">Enjoy Your Desire</option>
+                <option value="4">Finding My Shadow</option>
+                <option value="5">Heroic Forever</option>
+                <option value="6">Midnight Fires</option>
                 <option value="7">Music Of My Life</option>
-                <option value="8">Song For Yesterday</option>
-                <option value="9">Heroic Forever</option>
-                <option value="10">Midnight Fires</option>
-                <option value="11">Street Of The Rider</option>
+                <option value="8">Party For An Angel</option>
+                <option value="9">Song For Yesterday</option>
+                <option value="10">Street Of The Rider</option>
+                <option value="11">This Is For You</option>
               </select>
-
-              <p>What is your favorite song:</p>
-              <textarea></textarea>
-            </form>
-          </div>
+              <p><label for="song">What is your favorite song:</label></p>
+              <textarea id="song" name="song"></textarea>
+            </fieldset>
+          </form>
         </div>
       </div>
-      <p class= "heading">Newsletter</p>
-      <div class="card">
-        <div class="flex">
-          <img class="photo" src= "img/the_band.jpg">
-            <div class="container">
-              <form class="newsletter">
-                  <p>Name: <input type ="text" name="textfield"></p>
-                  <p>Email: <input type ="email" name="textfield"></p>
-                  <p>Retype Email: <input type ="email" name="textfield"></p>
-                  <button type="submit">Sign Up</button>
-              </form>
-            </div>
+    </div>
+    <h2>Newsletter</h2>
+    <div class="card">
+      <div class="flex">
+        <img class="photo" src= "img/the_band.jpg" alt="a man rocking out on the drums">
+        <div class="container">
+          <form class="newsletter">
+            <fieldset>
+              <legend>Sign up to our newsletter</legend>
+              <p><label for="name">Name: </label><input type ="text" name="textfield" id="name" aria-describedby="sr-name"></p>
+              <p id="sr-name">Please enter your name in this field</p>
+              <p><label for="email">Email: </label><input type ="email" name="textfield" id="email" aria-describedby="sr-email"></p>
+              <p id="sr-email">Please enter your email in this field</p>
+              <p><label for="email-confirm">Retype Email: </label><input type ="email" name="textfield" id="email-confirm"></p>
+              <button type="submit">Sign Up</button>
+            </fieldset>
+          </form>
         </div>
       </div>
-    </main>
-
-    <footer>
-      <ul>
-        <li><a href="#" class="social twitter"><img src= "img/twitter-32.png"></a></li>
-        <li><a href="#" class="social youtube"><img src= "img/youtube-32.png"></a></li>
-        <li><a href="#" class="social spotify"><img src= "img/spotify-32.png"></a></li>
-      </ul>
-      <p class="copyright">Copyright 2015, Accessible Frog</p>
-    </footer>
-  </body>
+    </div>
+  </main>
+  <footer role="contentinfo">
+    <ul>
+      <li><a href="#" class="social twitter"><img src= "img/twitter-32.png" alt="twitter icon"></a></li>
+      <li><a href="#" class="social youtube"><img src= "img/youtube-32.png" alt="youtube icon"></a></li>
+      <li><a href="#" class="social spotify"><img src= "img/spotify-32.png" alt="spotify icon"></a></li>
+    </ul>
+    <p class="copyright">Copyright 2015, Accessible Frog</p>
+  </footer>
+</body>
 </html>
