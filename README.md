@@ -3,7 +3,7 @@
 ## Project overview
 In this project you have to make an unaccessible site accessible, using a variety of best practices and tools available.
 
-This project was interesting and definitely one area that I will continue to learn and focus on in the future, plenty more to explorer here I feel.
+This project was interesting and one area that I will continue to learn and focus on in the future, plenty more to explore here I feel.
 
 ## Resources
 http://a11yproject.com/resources.html
